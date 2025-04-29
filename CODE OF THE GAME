@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+int main() {
+   int secretguess = 5;
+   int guesses;
+   int guesscount = 0;
+   int guesslimit = 4;
+   bool no_more_guess = false ;
+   
+   
+   while(secretguess != guesses && !no_more_guess){
+       if(guesscount < guesslimit){
+           cout << "tell me your guess number : ";
+           cin >> guesses ;
+        guesscount++;
+       }else{
+           no_more_guess = true;
+       }
+   }
+   if(no_more_guess){
+       cout<<"you loose this game ";
+       
+   }else{
+       cout << "congratulations you won this game ";
+   }
+    return 0;
+}
